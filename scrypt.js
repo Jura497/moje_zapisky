@@ -110,4 +110,4 @@ window.addEventListener('load', () => {
         document.getElementById('notes-section').classList.remove('hidden');
         loadNotes();
     }
-});
+}); 
