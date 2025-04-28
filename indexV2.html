@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Zápisky</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="theme-toggle" title="Přepnout režim">🌙</button>
+    <div id="initial-buttons">
+        <button id="show-login">Přihlásit se</button>
+        <button id="show-register">Vytvořit účet</button>
+    </div>
+    <div id="auth-forms">
+        <form id="login-form" class="hidden">
+            <h2>Přihlášení</h2>
+            <div class="field">
+                <input type="text" id="login-username" placeholder="Uživatelské jméno" required>
+            </div>
+            <div class="field">
+                <input type="password" id="login-password" placeholder="Heslo" required>
+                <button type="button" class="toggle-password" data-target="login-password">👁️</button>
+            </div>
+            <button type="button" onclick="login()">Přihlásit</button>
+        </form>
+        <form id="register-form" class="hidden">
+            <h2>Registrace</h2>
+            <div class="field">
+                <input type="text" id="register-username" placeholder="Uživatelské jméno" required>
+            </div>
+            <div class="field">
+                <input type="password" id="register-password" placeholder="Heslo" required>
+                <button type="button" class="toggle-password" data-target="register-password">👁️</button>
+            </div>
+            <div class="field">
+                <input type="password" id="register-confirm" placeholder="Potvrď heslo" required>
+                <button type="button" class="toggle-password" data-target="register-confirm">👁️</button>
+            </div>
+            <button type="button" onclick="register()">Vytvořit účet</button>
+        </form>
+    </div>
+    <div id="notes-section" class="hidden">
+        <h2>Moje Zápisky</h2>
+        <textarea id="notes" placeholder="Sem piš své poznámky..."></textarea>
+        <div class="buttons">
+            <button onclick="saveNotes()">Uložit</button>
+            <button onclick="logout()">Odhlásit se</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
